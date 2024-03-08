@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Új Kategória Létrehozása</title>
+    <!--Todo:create css file-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .category-form {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline;
+            flex-direction:column;
+            align-items: stretch;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .color-preview-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .color-preview {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {           
+            width: 15%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="category-form">
+        <h2>Új Kategória Létrehozása</h2>
+        <label for="categoryName">Kategória neve:</label>
+        <input id="categoryName" type="text">
+        <label for="categoryColor">Kategória színe:</label>
+        <div class="color-preview-container">
+            <select id="categoryColor" onchange="updateColorPreview()">
+                <option value="blue">Kék</option>
+                <option value="red">Piros</option>
+                <option value="green">Zöld</option>
+            </select>
+            <div class="color-preview" id="colorPreview"></div>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location.href='Main.html';">Mentés</button>
+            <button onclick="window.location.href='Main.html';">Mégse</button>
+        </div>
+    </div>
+
+    <script>
+
+        function updateColorPreview() {
+            const colorSelect = document.getElementById('categoryColor');
+            const colorPreview = document.getElementById('colorPreview');
+            colorPreview.style.backgroundColor = colorSelect.value;
+        }
+
+        window.onload = updateColorPreview;
+    </script>
+
+</body>
+</html>

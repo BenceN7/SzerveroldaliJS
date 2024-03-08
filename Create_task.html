@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Új Feladat Létrehozása</title>
+    <!--Todo:create css file-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            width: 15%;
+            padding: 10px;
+            margin: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Új Feladat Létrehozása</h2>
+
+        <label for="taskName">Feladat Neve:</label>
+        <input type="text" id="taskName">
+
+        <label for="taskDescription">Feladat Leírása:</label>
+        <textarea id="taskDescription"></textarea>
+
+        <label for="dependency">Függőség:</label>
+        <select id="dependency">
+            <option value="">Nincs függőség</option>
+            <option value="task1">Feladat 1</option>
+            <option value="task2">Feladat 2</option>
+        </select>
+
+        <label for="category">Kategória:</label>
+        <select id="category">
+            <option value="work">Munka</option>
+            <option value="home">Otthon</option>
+            <option value="personal">Személyes</option>
+        </select>
+
+        <div class="buttons">
+            <button onclick="window.location.href='Main.html';">Mentés</button>
+            <button onclick="window.location.href='Main.html';">Mégse</button>
+        </div>
+        
+    </div>
+</body>
+</html>

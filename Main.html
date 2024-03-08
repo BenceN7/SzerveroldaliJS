@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <!--Todo:create css file-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            color: #3498db;
+            margin: 15px;
+        }
+
+        .task {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .checkbox {
+            margin-right: 0px;
+        }
+
+        .category {
+            color: #555;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+        }
+
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .dependency-select {
+            padding: 6px;
+        }
+        .buttons { 
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        button {
+            width: 10%;
+            margin: 20px;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .color-work { background-color: #3498db; }
+        .color-home { background-color: #e74c3c; }
+        .color-personal { background-color: #2ecc71; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Todo List App</h1>
+    </header>
+
+    <div class="container">
+        <h2>Feladatok</h2>
+
+        <div class="task">
+            <div>
+                <input type="checkbox" class="checkbox">
+                <a href="Details.html">Feladat 1</a>
+            </div>
+            <div class="dependency-select">
+                <label for="dependency">Függőség:</label>
+                <select id="dependency">
+                    <option value="">Nincs függőség</option>
+                    <option value="task2">Feladat 2</option>
+                </select>
+            </div>
+            <p class="category">
+                <span class="color-box color-work"></span>
+                Kategória: Munka
+            </p>
+        </div>
+
+        <div class="task">
+            <div>
+                <input type="checkbox" class="checkbox">
+                <a href="Details.html">Feladat 2</a>
+            </div>
+            <div class="dependency-select">
+            <label for="dependency">Függőség:</label>
+            <select id="dependency">
+                <option value="">Nincs függőség</option>
+                <option value="task1">Feladat 1</option>
+            </select>
+        </div>
+            <p class="category">
+                <span class="color-box color-home"></span>
+                Kategória: Otthon
+            </p>
+           
+          
+        </div>
+        <div class="buttons">
+        <button onclick="window.location.href='Create_task.html';">Új Feladat</button>
+        <button onclick="window.location.href='Create_category.html';">Új Kategoria</button>
+    </div>
+    </div>
+
+</body>
+</html>
